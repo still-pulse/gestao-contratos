@@ -1,0 +1,195 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "naming_series:",
+	"creation": "2026-07-17 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"naming_series",
+		"section_ident",
+		"contrato",
+		"numero",
+		"tipo",
+		"column_break_st",
+		"status",
+		"data_assinatura",
+		"section_valores",
+		"valor_anterior",
+		"valor_novo",
+		"column_break_pr",
+		"prazo_anterior",
+		"prazo_novo",
+		"section_just",
+		"justificativa",
+		"observacoes",
+		"amended_from"
+	],
+	"fields": [
+		{
+			"default": "GC-ADI-.YYYY.-.#####",
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"label": "Série",
+			"options": "GC-ADI-.YYYY.-.#####",
+			"reqd": 1
+		},
+		{
+			"fieldname": "section_ident",
+			"fieldtype": "Section Break",
+			"label": "Identificação"
+		},
+		{
+			"fieldname": "contrato",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"in_standard_filter": 1,
+			"label": "Contrato",
+			"options": "GC Contrato",
+			"reqd": 1
+		},
+		{
+			"fieldname": "numero",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Número",
+			"reqd": 1
+		},
+		{
+			"default": "Valor",
+			"fieldname": "tipo",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"in_standard_filter": 1,
+			"label": "Tipo",
+			"options": "Valor\nPrazo\nEscopo\nOutros",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_st",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "Pendente",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"in_standard_filter": 1,
+			"label": "Status",
+			"options": "Pendente\nAprovado\nRejeitado",
+			"reqd": 1
+		},
+		{
+			"fieldname": "data_assinatura",
+			"fieldtype": "Date",
+			"in_list_view": 1,
+			"label": "Data de Assinatura",
+			"reqd": 1
+		},
+		{
+			"fieldname": "section_valores",
+			"fieldtype": "Section Break",
+			"label": "Valor e Prazo"
+		},
+		{
+			"fieldname": "valor_anterior",
+			"fieldtype": "Currency",
+			"label": "Valor Anterior"
+		},
+		{
+			"fieldname": "valor_novo",
+			"fieldtype": "Currency",
+			"label": "Valor Novo"
+		},
+		{
+			"fieldname": "column_break_pr",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "prazo_anterior",
+			"fieldtype": "Date",
+			"label": "Prazo Anterior"
+		},
+		{
+			"fieldname": "prazo_novo",
+			"fieldtype": "Date",
+			"label": "Prazo Novo"
+		},
+		{
+			"fieldname": "section_just",
+			"fieldtype": "Section Break",
+			"label": "Justificativa"
+		},
+		{
+			"fieldname": "justificativa",
+			"fieldtype": "Small Text",
+			"label": "Justificativa"
+		},
+		{
+			"fieldname": "observacoes",
+			"fieldtype": "Text",
+			"label": "Observações"
+		},
+		{
+			"fieldname": "amended_from",
+			"fieldtype": "Link",
+			"label": "Amended From",
+			"no_copy": 1,
+			"options": "GC Aditivo",
+			"print_hide": 1,
+			"read_only": 1
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"links": [],
+	"modified": "2026-07-17 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Gestao Contratos",
+	"name": "GC Aditivo",
+	"naming_rule": "By \"Naming Series\" field",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "GC Gestor",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "GC Operacional",
+			"share": 0,
+			"write": 1
+		}
+	],
+	"search_fields": "contrato,numero,tipo,status",
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"title_field": "numero",
+	"track_changes": 1
+}

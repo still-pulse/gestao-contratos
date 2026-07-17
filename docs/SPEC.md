@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Versão** | 0.2.0 |
+| **Versão** | 0.3.0 |
 | **Ambiente** | gregory-dev (ERPNext 15) |
 | **Fonte de regras** | Axior (Lovable/Supabase) — funcionalidades, não UI |
 | **App** | `gestao_contratos` |
@@ -26,15 +26,15 @@
 
 | Axior | DocType / nativo | Tipo | Status |
 |---|---|---|---|
-| `contracts` | **GC Contrato** | DocType | **Slice 1 (este release)** |
-| `itens_contratuais` | **GC Item Contratual** | Child Table | **Slice 1** |
-| `projects` | `Project` (ERPNext) | Nativo + link | Slice 1 (link opcional) |
-| unidade / tenant | `Company` | Nativo + link | Slice 1 |
-| contratado (pessoa PJ) | `Supplier` | Nativo + link | Slice 1 |
-| `aditivos_contrato` | **GC Aditivo** | DocType | Slice 2 |
-| `medicoes` + `medicoes_itens` | **GC Medicao** + child | DocType | Slice 2 |
-| `pagamentos` | **GC Pagamento** | DocType | Slice 2 |
-| `penalidades` | **GC Penalidade** | DocType | Slice 2 |
+| `contracts` | **GC Contrato** | DocType | **Feito (0.2)** |
+| `itens_contratuais` | **GC Item Contratual** | Child Table | **Feito (0.2)** |
+| `projects` | `Project` (ERPNext) | Nativo + link | **Feito (0.2)** |
+| unidade / tenant | `Company` | Nativo + link | **Feito (0.2)** |
+| contratado (pessoa PJ) | `Supplier` | Nativo + link | **Feito (0.2)** |
+| `aditivos_contrato` | **GC Aditivo** | DocType | **Feito (0.3)** |
+| `medicoes` + `medicoes_itens` | **GC Medicao** + **GC Item Medicao** | DocType | **Feito (0.3)** |
+| `pagamentos` | **GC Pagamento** | DocType | **Feito (0.3)** |
+| `penalidades` | **GC Penalidade** | DocType | **Feito (0.3)** |
 
 ### P1 — pessoas e protocolo
 
@@ -121,18 +121,26 @@ Mapeamento Axior `contracts` + UI types:
 
 ## 5. Slices seguintes (P0 restante)
 
-### Slice 2 — lifecycle
+### Slice 2 — lifecycle (**feito em 0.3.0**)
 
-- **GC Aditivo**: numero, tipo (Valor/Prazo/Escopo/Outros), valores/prazos antigos/novos, data_assinatura, status, link GC Contrato  
-- **GC Medicao**: periodo, data, aprovada, valor_total; child com link ao item + qtd executada  
-- **GC Pagamento**: valor, vencimento, pagamento, tipo/numero documento, competencia, link medicao opcional  
+- **GC Aditivo**: numero, tipo (Valor/Prazo/Escopo/Outros), valores/prazos, data_assinatura, status  
+- **GC Medicao**: periodo, data, aprovada, % físico, valor_total; child **GC Item Medicao** (prefill a partir do contrato)  
+- **GC Pagamento**: valor, vencimento, pagamento, tipo/numero documento, competencia, link medicao (validado)  
 - **GC Penalidade**: tipo, valor, data, motivo, status  
 
-### Slice 3 — UX P0
+### Slice 3 — UX P0 / polish
 
-- Roles: `GC Gestor`, `GC Operacional`  
-- Workspace cards + filtros list view  
+- Roles já criadas: `GC Gestor`, `GC Operacional`  
+- Workspace com atalhos (atualizado no migrate)  
 - Alertas de vencimento (scheduler) — opcional  
+- Dashboard Number Cards — opcional  
+
+### Critério de pronto — Slice 2
+
+- [x] DocTypes no filesystem  
+- [ ] migrate no gregory-dev  
+- [ ] Connections no form GC Contrato  
+
 
 ---
 

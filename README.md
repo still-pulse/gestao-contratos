@@ -130,9 +130,13 @@ gestao_contratos/
 
 ## Versão
 
-`0.2.0` — SPEC + **GC Contrato** / **GC Item Contratual** + Workspace (slice 1).
+`0.3.0` — P0 completo (slice 1 + 2):
 
-Ver `docs/SPEC.md` para matriz Axior → DocTypes e próximos slices.
+- **GC Contrato** + **GC Item Contratual**
+- **GC Aditivo**, **GC Medicao** (+ **GC Item Medicao**), **GC Pagamento**, **GC Penalidade**
+- Workspace **Gestao Contratos** com atalhos
+
+Ver `docs/SPEC.md`.
 
 ## Licença
 

@@ -7,7 +7,7 @@ app_description = (
 )
 app_email = "contato@stillpulse.com"
 app_license = "mit"
-app_version = "0.2.0"
+app_version = "0.3.0"
 
 required_apps = ["frappe", "erpnext"]
 

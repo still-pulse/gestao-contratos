@@ -162,8 +162,29 @@
 	],
 	"index_web_pages_for_search": 1,
 	"is_submittable": 0,
-	"links": [],
-	"modified": "2026-07-17 00:00:00.000000",
+	"links": [
+		{
+			"group": "Lifecycle",
+			"link_doctype": "GC Aditivo",
+			"link_fieldname": "contrato"
+		},
+		{
+			"group": "Lifecycle",
+			"link_doctype": "GC Medicao",
+			"link_fieldname": "contrato"
+		},
+		{
+			"group": "Lifecycle",
+			"link_doctype": "GC Pagamento",
+			"link_fieldname": "contrato"
+		},
+		{
+			"group": "Lifecycle",
+			"link_doctype": "GC Penalidade",
+			"link_fieldname": "contrato"
+		}
+	],
+	"modified": "2026-07-17 04:30:00.000000",
 	"modified_by": "Administrator",
 	"module": "Gestao Contratos",
 	"name": "GC Contrato",
