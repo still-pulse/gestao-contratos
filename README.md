@@ -38,10 +38,16 @@ cd /home/frappe/frappe-bench/apps
 git clone https://github.com/still-pulse/gestao-contratos.git gestao_contratos
 cd /home/frappe/frappe-bench
 ./env/bin/pip install -e apps/gestao_contratos
+
+# Registrar o app no bench (necessário se não usou get-app)
+grep -qx gestao_contratos sites/apps.txt || echo gestao_contratos >> sites/apps.txt
+
 bench --site frontend install-app gestao_contratos
 bench --site frontend migrate
 bench --site frontend clear-cache
 ```
+
+Hot-deploy no **gregory-dev**: copiar/clonar em **todos** os containers Frappe (`backend`, `queue-*`, `scheduler`, `websocket`), `pip install -e` em cada um, depois `install-app` só no backend.
 
 Ou, se `bench get-app` estiver disponível e renomear corretamente:
 
