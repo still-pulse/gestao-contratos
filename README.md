@@ -130,7 +130,9 @@ gestao_contratos/
 
 ## Versão
 
-`0.1.0` — scaffold inicial (módulo vazio, instalável).
+`0.2.0` — SPEC + **GC Contrato** / **GC Item Contratual** + Workspace (slice 1).
+
+Ver `docs/SPEC.md` para matriz Axior → DocTypes e próximos slices.
 
 ## Licença
 

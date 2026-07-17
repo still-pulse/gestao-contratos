@@ -1,0 +1,216 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "naming_series:",
+	"creation": "2026-07-17 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"naming_series",
+		"section_identificacao",
+		"company",
+		"project",
+		"supplier",
+		"column_break_id",
+		"status",
+		"tipo_preco",
+		"section_objeto",
+		"objeto",
+		"observacoes",
+		"section_vigencia",
+		"data_inicio",
+		"data_fim",
+		"column_break_val",
+		"valor_mensal",
+		"valor_itens_total",
+		"section_itens",
+		"itens",
+		"amended_from"
+	],
+	"fields": [
+		{
+			"default": "GC-CONT-.YYYY.-.#####",
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"label": "Série",
+			"options": "GC-CONT-.YYYY.-.#####",
+			"reqd": 1
+		},
+		{
+			"fieldname": "section_identificacao",
+			"fieldtype": "Section Break",
+			"label": "Identificação"
+		},
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"in_standard_filter": 1,
+			"label": "Unidade / Company",
+			"options": "Company",
+			"reqd": 1
+		},
+		{
+			"fieldname": "project",
+			"fieldtype": "Link",
+			"in_standard_filter": 1,
+			"label": "Projeto",
+			"options": "Project"
+		},
+		{
+			"fieldname": "supplier",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"in_standard_filter": 1,
+			"label": "Contratada",
+			"options": "Supplier",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_id",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "Rascunho",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"in_standard_filter": 1,
+			"label": "Status",
+			"options": "Rascunho\nVigente\nVencido\nSuspenso\nCancelado",
+			"reqd": 1
+		},
+		{
+			"default": "Fixo",
+			"fieldname": "tipo_preco",
+			"fieldtype": "Select",
+			"label": "Tipo de Preço",
+			"options": "Fixo\nVariavel",
+			"reqd": 1
+		},
+		{
+			"fieldname": "section_objeto",
+			"fieldtype": "Section Break",
+			"label": "Objeto"
+		},
+		{
+			"fieldname": "objeto",
+			"fieldtype": "Small Text",
+			"in_list_view": 1,
+			"label": "Objeto",
+			"reqd": 1
+		},
+		{
+			"fieldname": "observacoes",
+			"fieldtype": "Text",
+			"label": "Observações"
+		},
+		{
+			"fieldname": "section_vigencia",
+			"fieldtype": "Section Break",
+			"label": "Vigência e Valores"
+		},
+		{
+			"fieldname": "data_inicio",
+			"fieldtype": "Date",
+			"in_list_view": 1,
+			"label": "Data Início",
+			"reqd": 1
+		},
+		{
+			"fieldname": "data_fim",
+			"fieldtype": "Date",
+			"in_list_view": 1,
+			"label": "Data Fim",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_val",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "valor_mensal",
+			"fieldtype": "Currency",
+			"label": "Valor Mensal"
+		},
+		{
+			"fieldname": "valor_itens_total",
+			"fieldtype": "Currency",
+			"label": "Total dos Itens",
+			"read_only": 1
+		},
+		{
+			"fieldname": "section_itens",
+			"fieldtype": "Section Break",
+			"label": "Itens Contratuais"
+		},
+		{
+			"fieldname": "itens",
+			"fieldtype": "Table",
+			"label": "Itens",
+			"options": "GC Item Contratual"
+		},
+		{
+			"fieldname": "amended_from",
+			"fieldtype": "Link",
+			"label": "Amended From",
+			"no_copy": 1,
+			"options": "GC Contrato",
+			"print_hide": 1,
+			"read_only": 1
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"is_submittable": 0,
+	"links": [],
+	"modified": "2026-07-17 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Gestao Contratos",
+	"name": "GC Contrato",
+	"naming_rule": "By \"Naming Series\" field",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "GC Gestor",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "GC Operacional",
+			"share": 0,
+			"write": 1
+		}
+	],
+	"search_fields": "objeto,supplier,status,company",
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"title_field": "objeto",
+	"track_changes": 1
+}

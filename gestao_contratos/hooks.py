@@ -7,12 +7,12 @@ app_description = (
 )
 app_email = "contato@stillpulse.com"
 app_license = "mit"
-app_version = "0.1.0"
+app_version = "0.2.0"
 
 required_apps = ["frappe", "erpnext"]
 
-# after_install = "gestao_contratos.setup.after_install"
-# after_migrate = "gestao_contratos.setup.after_migrate"
+after_install = "gestao_contratos.setup.after_install"
+after_migrate = "gestao_contratos.setup.after_migrate"
 
 # fixtures = []
 
