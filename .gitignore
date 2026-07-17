@@ -1,0 +1,32 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Env / IDE
+.env
+.env.*
+.venv/
+venv/
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Frappe / node
+node_modules/
+sites/
+*.log
+
+# Test / coverage
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
