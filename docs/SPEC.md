@@ -150,6 +150,7 @@ Mapeamento Axior `contracts` + UI types:
 
 - [x] SPEC neste arquivo  
 - [x] DocTypes `GC Contrato` e `GC Item Contratual` no filesystem  
-- [ ] migrate no gregory-dev sem erro  
-- [ ] Criar/editar contrato com itens no Desk  
-- [ ] Workspace **Gestao Contratos** visível com link ao DocType  
+- [x] migrate no gregory-dev sem erro (`v0.2.0`)  
+- [ ] Criar/editar contrato com itens no Desk (validação manual)  
+- [x] Workspace **Gestao Contratos** criado no site  
+
